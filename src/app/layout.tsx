@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Permanent_Marker } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const marker = Permanent_Marker({ style: "normal", weight: "400", subsets: ['latin'], variable: "--font-marker" })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +19,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+      <body className={marker.variable}>{children}</body></html>
   );
 }
