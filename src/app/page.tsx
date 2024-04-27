@@ -7,7 +7,9 @@ export default function Home() {
     const left = document.getElementById("left-side");
 
     const handleMove = (e: any) => {
-      left.style.width = `${e.clientX / window.innerWidth * 100}%`;
+      if (left) {
+        left.style.width = `${e.clientX / window.innerWidth * 100}%`;
+      }
     }
 
     document.onmousemove = e => handleMove(e);
