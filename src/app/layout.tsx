@@ -5,7 +5,12 @@ import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const marker = Permanent_Marker({ style: "normal", weight: "400", subsets: ['latin'], variable: "--font-marker" })
+const marker = Permanent_Marker({
+  style: "normal",
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-marker",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={marker.variable}>{children}</body></html>
+      <body className={`${marker.variable}  bg-black`}>{children}</body>
+    </html>
   );
 }
