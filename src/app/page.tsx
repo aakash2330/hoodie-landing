@@ -42,6 +42,10 @@ export default function Page() {
         offset={2}
         speed={0}
       >
+        <div className="text-5xl">Sustainable. Beautiful. Ethical.</div>
+        <Button className="bg-white text-black w-36 hover:bg-white">
+          Shop Now
+        </Button>
 
       </ParallaxLayer>
     </Parallax>
