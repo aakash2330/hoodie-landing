@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${marker.variable}  bg-black`}>{children}</body>
+      <body className={`${marker.variable}  bg-black`}>
+        {children}</body>
     </html>
   );
 }

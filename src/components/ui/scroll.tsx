@@ -8,7 +8,7 @@ const ScrollElement = () => {
 	return (
 		<div
 			className={clsx(
-				"flex flex-col justify-center items-center transition-opacity duration-1000",
+				"flex flex-col justify-center gap-3 items-center transition-opacity duration-1000",
 			)}
 		>
 			<p
@@ -17,7 +17,7 @@ const ScrollElement = () => {
 					"lg:text-xl lg:text-white"
 				)}
 			>
-				SCROLL
+				SCROLL TO EXPERIENCE
 			</p>
 			<div
 				className={clsx("h-10 w-px bg-black", "lg:bg-white lg:h-20")}

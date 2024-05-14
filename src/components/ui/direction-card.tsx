@@ -11,7 +11,7 @@ export function DirectionAwareHoverDemo({ img }: { img: string }) {
     <div className="h-[40rem] relative  flex items-center justify-center">
       <DirectionAwareHover imageUrl={img}>
         <p className="font-bold text-xl">Hoodie</p>
-        <p className="font-normal text-sm">₹1999</p>
+        <p className="font-normal text-sm">Shop Now</p>
       </DirectionAwareHover>
     </div>
   );
