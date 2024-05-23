@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import Marquee from "@/components/marquee";
 
 const img1 = require("../../public/DALL·E 2024-05-14 13.30.01 - A men's hippie-style hoodie in a rich palette of earth tones including terracotta, moss green, and sandy beige, featuring an abstract tie-dye pattern.webp");
 const img2 = require("../../public/DALL·E 2024-05-14 13.30.04 - A men's hippie-style hoodie in subdued earth tones of clay red, forest green, and beige, displaying a gentle swirl tie-dye effect. This hoodie offers .webp");
@@ -63,7 +64,7 @@ export default function Page() {
   }, []);
 
   return (
-    <Parallax ref={parallax} className="text-white" pages={5}>
+    <Parallax ref={parallax} className="text-white" pages={6}>
       <ParallaxLayer
         style={{
           zIndex: -1,
@@ -74,12 +75,12 @@ export default function Page() {
           MozTransition: "background-color 0.5s ease",
           OTransition: "background-color 0.5s ease",
         }}
-        className="flex flex-col gap-5 h-screen  items-center  justify-center"
+        className="flex  shadow-2xl flex-col gap-5 h-screen  items-center  justify-center"
         offset={0}
         sticky={{ start: 0, end: 2 }}
       >
         {isScrollToExperienceShow && (
-          <SparklesPreview text={heroText}></SparklesPreview>
+          <BlurCardComponent ></BlurCardComponent>
         )}
         {isScrollToExperienceShow && <ScrollElement></ScrollElement>}
       </ParallaxLayer>
@@ -104,18 +105,15 @@ export default function Page() {
         className="flex flex-col  items-center justify-center"
         sticky={{ start: 2, end: 3 }}
       >
-        <div
-          className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <div className="w-full h-full">
-              <Image
-                src={
-                  img4
-                }
-                alt="asd"
-                style={{ transition: "1s ease" }}
-                objectFit="cover"
-                fill
-              ></Image>
+            <Image
+              src={img4}
+              alt="asd"
+              style={{ transition: "1s ease" }}
+              objectFit="cover"
+              fill
+            ></Image>
           </div>
           <div
             style={{
@@ -126,7 +124,7 @@ export default function Page() {
               ` ${currentPage >= 2.2 ? "opacity-0" : null} gap-7 bg-[#fcf6f2] flex flex-col items-center text-center text-black font-sans text-3xl justify-center p-10 size-[40rem]`,
             )}
           >
-            <div>Carefull Crafted For People That Care</div>
+            <div>Carefully Crafted For People That Care</div>
             <div className="font-extralight text-base ">
               I'm a paragraph. Click here to add your own text and edit me. I’m
               a great place for you to tell a story and let your users know a
@@ -162,15 +160,21 @@ export default function Page() {
         <Expanding></Expanding>
       </ParallaxLayer>
 
-      <ParallaxLayer
+<ParallaxLayer
         className="flex flex-col gap-2  items-center justify-center"
         offset={4}
+        style={{ zIndex: 2, height: "100vh",width:"full", backgroundColor: "#EDE5DF" }}
+      >
+        <InfiniteText></InfiniteText>
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        className="flex flex-col gap-2  items-center justify-center"
+        offset={5}
         style={{ zIndex: 2, height: "100vh", backgroundColor: "#EDE5DF" }}
       >
-        <h1 className="text-5xl text-[#AD6343] font-bold">
-            <div>Ask Our Customers</div>
-        </h1>
         <InfiniteMovingCardsDemo></InfiniteMovingCardsDemo>
+
       </ParallaxLayer>
     </Parallax>
   );

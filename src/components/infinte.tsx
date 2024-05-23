@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -88,27 +89,26 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className="w-[350px] h-[350px] max-w-full relative rounded-2xl   flex-shrink-0 px-8 py-6 md:w-[450px]"
-            style={{
-              backgroundImage: `url(${item.quote})`,
-              backgroundSize: "cover",
-            }}
             key={item.name}
           >
             <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-              <span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
-                {item.name}
-              </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
+              <Image
+                
+                src={item.quote}
+                alt="asd"
+                style={{ transition: "1s ease", zIndex:"-1" }}
+                objectFit="cover"
+                unoptimized
+                priority={true}
+                fill
+              ></Image>
+              <div style={{zIndex:100}} className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
                   <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
                     {item.title}
                   </span>
                   <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {}
+                    {item.name}
                   </span>
                 </span>
               </div>

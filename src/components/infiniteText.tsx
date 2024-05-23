@@ -59,8 +59,7 @@ export default function InfiniteText() {
         </defs>
       </svg>
 
-      <div className="wrapper">
-        <div className="left">
+        <div className="left ">
           <div className="marquee">
             <div className="marquee--inner">
               <p style={{ filter: "url(#duplicate) url(#marquee-left)" }}>
@@ -71,7 +70,7 @@ export default function InfiniteText() {
           <div className="marquee">
             <div className="marquee--inner">
               <p
-                className="outline"
+                className="border-[2px] border-black"
                 style={{ filter: "url(#duplicate) url(#marquee-right)" }}
               >
                 Design Create Connect .
@@ -83,7 +82,6 @@ export default function InfiniteText() {
           <div className="marquee">
             <div className="marquee--inner">
               <p
-                className="outline"
                 style={{ filter: "url(#duplicate) url(#marquee-left)" }}
               >
                 What's Trending .
@@ -92,24 +90,16 @@ export default function InfiniteText() {
           </div>
           <div className="marquee">
             <div className="marquee--inner">
-              <p style={{ filter: "url(#duplicate) url(#marquee-right)" }}>
+              <p 
+
+                className="border-[2px] border-black"
+              style={{ filter: "url(#duplicate) url(#marquee-right)" }}>
                 Design Create Connect .
               </p>
             </div>
           </div>
         </div>
 
-        <div
-          className="can h-[30rem] rounded-[2%]"
-          style={{
-            backgroundImage:
-              "url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/skater.gif')",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div>
-      </div>
     </>
   );
 }
