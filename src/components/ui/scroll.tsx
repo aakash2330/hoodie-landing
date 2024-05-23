@@ -14,13 +14,13 @@ const ScrollElement = () => {
 			<p
 				className={clsx(
 					"text-black text-lg mb-px animate-pulse",
-					"lg:text-xl lg:text-white"
+					"lg:text-xl lg:text-black"
 				)}
 			>
 				SCROLL TO EXPERIENCE
 			</p>
 			<div
-				className={clsx("h-10 w-px bg-black", "lg:bg-white lg:h-20")}
+				className={clsx("h-10 w-px bg-gray-800", "lg:bg-black lg:h-20")}
 			/>
 		</div>
 	);

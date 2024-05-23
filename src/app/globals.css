@@ -481,20 +481,20 @@ h1{
 
 .item-1 { 
   border-radius:2rem 0rem 0rem 2rem;
-  background-image: url('https://images.unsplash.com/photo-1602266817593-75de8e409713?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url('https://aakash2330-drippy.s3.amazonaws.com/hoodie/gloves3.jpg');
 }
 .item-2 { 
-  background-image: url('https://images.unsplash.com/photo-1510867759970-3d2ca293be77?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url("https://aakash2330-drippy.s3.amazonaws.com/hoodie/DALL%C2%B7E+2024-05-14+13.30.02+-+A+men's+hippie-style+hoodie+in+a+rich+palette+of+earth+tones+including+terracotta%2C+moss+green%2C+and+sandy+beige%2C+featuring+an+abstract+tie-dye+pattern.webp");
 }
 .item-3 { 
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/skater.gif');
+  background-image: url('https://aakash2330-drippy.s3.amazonaws.com/hoodie/final+output.jpg');
 }
 .item-4 { 
-  background-image: url('https://images.unsplash.com/photo-1604542031648-5ad00243d60f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url('https://aakash2330-drippy.s3.amazonaws.com/hoodie/Glovess.webp');
 }
 .item-5 { 
   border-radius:0rem 2rem 2rem 0rem;
-  background-image: url('https://images.unsplash.com/photo-1704430705406-24fc29dfcccf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url('https://aakash2330-drippy.s3.amazonaws.com/hoodie/DSC00720.JPG');
 }
 
 
@@ -704,9 +704,11 @@ article h3 {
 
 	.marquee--inner {
 		width: max-content;
+background-color: white;
 	}
 	
 	p {
+
 		color: white;
 		background: black;
 		display: flex;
@@ -757,3 +759,24 @@ article h3 {
 }
 
 
+.image-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out; /* Adjust the transition duration as needed */
+}
+
+.image-container img:first-child {
+  opacity: 1;
+}
+
+@keyframes fadeEffect {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.image-container img:nth-child(2) {
+  animation: fadeEffect 4s infinite; /* Adjust the animation duration as needed */
+}
