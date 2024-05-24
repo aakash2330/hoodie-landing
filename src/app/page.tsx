@@ -69,20 +69,28 @@ export default function Page() {
         style={{
           zIndex: -1,
           height: "100vh",
+          width:"100%",
           backgroundColor: bgColor,
           transition: "background-color 0.5s ease",
           WebkitTransition: "background-color 0.5s ease",
           MozTransition: "background-color 0.5s ease",
           OTransition: "background-color 0.5s ease",
         }}
-        className="flex  shadow-2xl flex-col gap-5 h-screen  items-center  justify-center"
         offset={0}
         sticky={{ start: 0, end: 2 }}
       >
-        {isScrollToExperienceShow && (
-          <BlurCardComponent ></BlurCardComponent>
-        )}
-        {isScrollToExperienceShow && <ScrollElement></ScrollElement>}
+        <Image
+          src={
+            "https://aakash2330-drippy.s3.amazonaws.com/hoodie/Hoddie+Poster+Breakdown-20240523T183335Z-001/Hoddie+Poster+Breakdown/sky.png"
+          }
+          alt="asd"
+          style={{ transition: "1s ease", zIndex: "-110" }}
+          objectFit="cover"
+          unoptimized
+          fill
+          priority={true}
+        ></Image>
+        <BlurCardComponent></BlurCardComponent>
       </ParallaxLayer>
 
       <ParallaxLayer
@@ -160,10 +168,15 @@ export default function Page() {
         <Expanding></Expanding>
       </ParallaxLayer>
 
-<ParallaxLayer
+      <ParallaxLayer
         className="flex flex-col gap-2  items-center justify-center"
         offset={4}
-        style={{ zIndex: 2, height: "100vh",width:"full", backgroundColor: "#EDE5DF" }}
+        style={{
+          zIndex: 2,
+          height: "100vh",
+          width: "full",
+          backgroundColor: "#EDE5DF",
+        }}
       >
         <InfiniteText></InfiniteText>
       </ParallaxLayer>
@@ -174,7 +187,6 @@ export default function Page() {
         style={{ zIndex: 2, height: "100vh", backgroundColor: "#EDE5DF" }}
       >
         <InfiniteMovingCardsDemo></InfiniteMovingCardsDemo>
-
       </ParallaxLayer>
     </Parallax>
   );

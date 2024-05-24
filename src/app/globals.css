@@ -636,12 +636,11 @@ h1 {
 
 
 article {
-	width: 1000px;
+	width: 100%;
 	aspect-ratio: 2 / 1.1;
 	min-height: 330px;
 	position: relative;
 	overflow: hidden;
-	max-width: calc(100% - 2rem);
   background: hsl(0 0% 50%);
 }
 
@@ -651,9 +650,8 @@ article > img {
 	left: 50%;
 	translate: -50% 0;
 	height: 100%;
-	width: 1000px;
+	width: 100%;
 	object-fit: cover;
-	object-position: center 43%;
 	user-select: none;
 	pointer-events: none;
 }
@@ -734,29 +732,11 @@ article h3 {
 	object-fit: cover;
 	left: 50%;
 	translate: -50% 0;
-	height: 430px;
+	height: 55rem;
 	position: absolute;
 	bottom: 25%;
-	width: 1000px;
+	width: 100%;
 	mask: radial-gradient(50% 100% at 50% 90%, white 50%, transparent);
   filter: saturate(1.5) brightness(0.8);
 }
 
-.bear-link {
-	color: canvasText;
-	position: fixed;
-	top: 1rem;
-	left: 1rem;
-	width: 48px;
-	aspect-ratio: 1;
-	display: grid;
-	place-items: center;
-	opacity: 0.8;
-}
-
-:where(.x-link, .bear-link):is(:hover, :focus-visible) {
-	opacity: 1;
-}
-.bear-link svg {
-	width: 75%;
-}
