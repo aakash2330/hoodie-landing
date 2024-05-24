@@ -1,5 +1,5 @@
 "use client";
-import  {ArrowRight} from "lucide-react"
+import { ArrowRight } from "lucide-react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -22,7 +22,6 @@ export default function BlurCardComponent({}: {}) {
     <div className="xx">
       <article className="bg-transparent">
         <h3>ETHKL</h3>
-
         <Image
           src={
             "https://aakash2330-drippy.s3.amazonaws.com/hoodie/Hoddie+Poster+Breakdown-20240523T183335Z-001/Hoddie+Poster+Breakdown/hoddie.png"

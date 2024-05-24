@@ -80,19 +80,22 @@ export default function Page() {
         }}
         offset={0}
         sticky={{ start: 0, end: 2 }}
+        className="flex items-center justify-center"
       >
-        <Image
-          src={
-            "https://aakash2330-drippy.s3.amazonaws.com/hoodie/Hoddie+Poster+Breakdown-20240523T183335Z-001/Hoddie+Poster+Breakdown/sky.png"
-          }
-          alt="asd"
-          style={{ transition: "1s ease", zIndex: "-110" }}
-          objectFit="cover"
-          unoptimized
-          fill
-          priority={true}
-        ></Image>
-        <BlurCardComponent></BlurCardComponent>
+        <div className="w-[1200px] shadow-2xl">
+          <Image
+            src={
+              "https://aakash2330-drippy.s3.amazonaws.com/hoodie/Hoddie+Poster+Breakdown-20240523T183335Z-001/Hoddie+Poster+Breakdown/sky.png"
+            }
+            alt="asd"
+            style={{ transition: "1s ease", zIndex: "-110" }}
+            objectFit="cover"
+            unoptimized
+            fill
+            priority={true}
+          ></Image>
+          <BlurCardComponent></BlurCardComponent>
+        </div>
       </ParallaxLayer>
 
       <ParallaxLayer
