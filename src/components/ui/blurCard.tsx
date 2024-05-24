@@ -1,4 +1,5 @@
 "use client";
+import  {ArrowRight} from "lucide-react"
 import { gsap } from "gsap";
 import Image from "next/image";
 import { useEffect } from "react";

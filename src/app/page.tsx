@@ -18,6 +18,8 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/marquee";
+import Link from "next/link";
+import { HoverBorderGradientDemo } from "@/components/buttonX";
 
 const img1 = require("../../public/DALL·E 2024-05-14 13.30.01 - A men's hippie-style hoodie in a rich palette of earth tones including terracotta, moss green, and sandy beige, featuring an abstract tie-dye pattern.webp");
 const img2 = require("../../public/DALL·E 2024-05-14 13.30.04 - A men's hippie-style hoodie in subdued earth tones of clay red, forest green, and beige, displaying a gentle swirl tie-dye effect. This hoodie offers .webp");
@@ -69,7 +71,7 @@ export default function Page() {
         style={{
           zIndex: -1,
           height: "100vh",
-          width:"100%",
+          width: "100%",
           backgroundColor: bgColor,
           transition: "background-color 0.5s ease",
           WebkitTransition: "background-color 0.5s ease",
@@ -100,8 +102,12 @@ export default function Page() {
         <WavyBackground backgroundFill="#EDE5DF" speed="fast">
           <h1 className="md:text-7xl text-2xl lg:text-7xl font-bold text-center text-white Permanent relative z-20 "></h1>
           <div className="flex gap-28 items-center justify-center">
-            <DirectionAwareHoverDemo img={img1}></DirectionAwareHoverDemo>
-            <DirectionAwareHoverDemo img={img2}></DirectionAwareHoverDemo>
+            <Link href={"/hoodie/1"}>
+              <DirectionAwareHoverDemo img={img1}></DirectionAwareHoverDemo>
+            </Link>
+            <Link href={"/hoodie/2"}>
+              <DirectionAwareHoverDemo img={img2}></DirectionAwareHoverDemo>
+            </Link>
           </div>
         </WavyBackground>
       </ParallaxLayer>
@@ -187,6 +193,11 @@ export default function Page() {
         style={{ zIndex: 2, height: "100vh", backgroundColor: "#EDE5DF" }}
       >
         <InfiniteMovingCardsDemo></InfiniteMovingCardsDemo>
+        <HoverBorderGradientDemo
+          onClickFn={function () {
+            parallax.current.scrollTo(1);
+          }}
+        ></HoverBorderGradientDemo>
       </ParallaxLayer>
     </Parallax>
   );
