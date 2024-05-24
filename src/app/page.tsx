@@ -85,7 +85,7 @@ export default function Page() {
         <div className="w-[1200px] shadow-2xl">
           <Image
             src={
-              "https://aakash2330-drippy.s3.amazonaws.com/hoodie/Hoddie+Poster+Breakdown-20240523T183335Z-001/Hoddie+Poster+Breakdown/sky.png"
+              "https://aakash2330-drippy.s3.amazonaws.com/hoodie/background.jpg"
             }
             alt="asd"
             style={{ transition: "1s ease", zIndex: "-110" }}
