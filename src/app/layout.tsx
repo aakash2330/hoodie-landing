@@ -3,6 +3,7 @@ import { Inter, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import Script from "next/script";
+import { NavbarDemo } from "@/components/navbarDemo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${marker.variable}  bg-black`}>
-        {children}</body>
+        <NavbarDemo></NavbarDemo>
+        <div>{children}</div>
+      </body>
     </html>
   );
 }
