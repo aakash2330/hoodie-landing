@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Page() {
@@ -29,7 +30,7 @@ export default function Page() {
           <div className="content">
             <h2 className="title">"Why us 1"</h2>
             <p className="description">Lengthy Product Description . Lengthy Product Description . Lengthy Product Description . Lengthy Product Description</p>
-            <button>Place Order</button>
+            <button className="hover:cursor-grab hover:underline"><Link href={'/contact'}>Place Order</Link></button>
           </div>
         </li>
         <li
@@ -44,7 +45,7 @@ export default function Page() {
 
             <p className="description">Lengthy Product Description . Lengthy Product Description . Lengthy Product Description . Lengthy Product Description</p>
 
-            <button>Place Order</button>
+            <button className="hover:cursor-grab hover:underline"><Link href={'/contact'}>Place Order</Link></button>
           </div>
         </li>
         <li
@@ -59,7 +60,7 @@ export default function Page() {
 
             <p className="description">Lengthy Product Description . Lengthy Product Description . Lengthy Product Description . Lengthy Product Description</p>
 
-            <button>Place Order</button>
+            <button className="hover:cursor-grab hover:underline"><Link href={'/contact'}>Place Order</Link></button>
           </div>
         </li>
         <li
@@ -74,7 +75,7 @@ export default function Page() {
 
             <p className="description">Lengthy Product Description . Lengthy Product Description . Lengthy Product Description . Lengthy Product Description</p>
 
-            <button>Place Order</button>
+            <button className="hover:cursor-grab hover:underline"><Link href={'/contact'}>Place Order</Link></button>
           </div>
         </li>
         <li
@@ -89,7 +90,7 @@ export default function Page() {
 
             <p className="description">Lengthy Product Description . Lengthy Product Description . Lengthy Product Description . Lengthy Product Description</p>
 
-            <button>Place Order</button>
+            <button className="hover:cursor-grab hover:underline"><Link href={'/contact'}>Place Order</Link></button>
           </div>
         </li>
         <li
@@ -102,7 +103,7 @@ export default function Page() {
           <div className="content">
             <h2 className="title">"Why us 1"</h2>
             <p className="description">Lengthy Product Description . Lengthy Product Description . Lengthy Product Description . Lengthy Product Description</p>
-            <button>Place Order</button>
+            <button className="hover:cursor-grab hover:underline"><Link href={'/contact'}>Place Order</Link></button>
           </div>
         </li>
       </ul>
