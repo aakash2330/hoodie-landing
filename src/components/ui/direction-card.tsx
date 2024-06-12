@@ -7,9 +7,9 @@ import { cn } from "@/utils/cn";
 import { DirectionAwareHover } from "../ui/direction-aware-hover";
 import { ArrowRight } from "lucide-react";
 
-export function DirectionAwareHoverDemo({ img }: { img: string }) {
+export function DirectionAwareHoverDemo({ img ,description}: { img: string,description:string }) {
   return (
-    <div className="h-[40rem] relative  flex items-center justify-center">
+    <div className=" relative flex flex-col items-center justify-center">
       <DirectionAwareHover imageUrl={img}>
         <p className="font-bold text-xl">Hoodie</p>
         <div className="flex justify-center items-center gap-1">
@@ -17,6 +17,7 @@ export function DirectionAwareHoverDemo({ img }: { img: string }) {
           <ArrowRight></ArrowRight>
         </div>
       </DirectionAwareHover>
+        <div className="text-gray-800">{description}</div>
     </div>
   );
 }

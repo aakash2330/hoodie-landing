@@ -648,7 +648,7 @@ article > img {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	translate: -50% 0;
+	translate: -30% 0;
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
@@ -672,12 +672,23 @@ article > img:last-of-type {
 
 article h3 {
 	position: absolute;
-	left: 50%;
-	top: 6%;
+	left: 30%;
+	top: 20%;
 	margin: 0;
 	font-size: 8rem;
 	translate: -50% 0;
 	text-transform: uppercase;
+	font-family: 'Bebas Neue', sans-serif;
+	color: white;
+	translate: calc(-50% + (var(--x) * -30px)) calc(var(--y) * -20px);
+}
+
+#blur-card-div {
+	position: absolute;
+	left: 25%;
+	top: 40%;
+	margin: 1rem;
+	font-size: 2rem;
 	font-family: 'Bebas Neue', sans-serif;
 	color: white;
 	translate: calc(-50% + (var(--x) * -30px)) calc(var(--y) * -20px);
@@ -760,7 +771,7 @@ article h3 {
   box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
   transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
 
-  &:nth-child(1), &:nth-child(2) {
+   &:nth-child(2) {
     left: 0;
     top: 0;
     width: 100%;
@@ -769,6 +780,17 @@ article h3 {
     border-radius: 0;
     box-shadow: none;
     opacity: 1;
+  }
+
+   &:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 0;
   }
 
   &:nth-child(3) { left: 50%; }

@@ -71,7 +71,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full boder border-transparent dark:bg-black dark:border-white/[0.2] bg-black bg-opacity-30 shadow-input flex justify-center space-x-4 px-8 py-6 "
+      className="relative rounded-full boder border-transparent dark:bg-black dark:border-white/[0.2] bg-black bg-opacity-100 shadow-input flex justify-center space-x-4 px-8 py-6 "
     >
       {children}
     </nav>
@@ -102,7 +102,7 @@ export const ProductItem = ({
         <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
           {title}
         </h4>
-        <p className="text-neutral-700 hover:cursor-grab hover:underline  text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-neutral-700 hover:cursor-alias hover:underline  text-sm max-w-[10rem] dark:text-neutral-300">
           {description}
         </p>
       </div>

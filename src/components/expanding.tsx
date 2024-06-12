@@ -1,5 +1,9 @@
 export default function Expanding(){
   return <div>
+    
+        <div className="text-5xl  text-center text-black Permanent">
+          Upcoming ETHKL Products
+        </div>
 <div className="container bg-transparent">
   <div className="gallery-wrap">
     <div className="itemx item-1">

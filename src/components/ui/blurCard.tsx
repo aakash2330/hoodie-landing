@@ -21,7 +21,13 @@ export default function BlurCardComponent({}: {}) {
   return (
     <div className="xx">
       <article className="bg-transparent">
-        <h3>ETHKL</h3>
+        <div id="blur-card-div">
+          <div className="flex flex-col justify-center items-center">
+          <h1 className="text-black font-bold text-8xl opacity-50">GO ETHKL</h1>
+          <p className="text-black font-thin opacity-50 text-2xl ">We provide boho style fashion products</p>
+          <p className="text-black font-thin opacity-50 text-2xl">with fresh looks and new trends</p>
+</div>
+        </div>
         <Image
           src={
             "https://aakash2330-drippy.s3.amazonaws.com/hoodie/Hoddie+Poster+Breakdown-20240523T183335Z-001/Hoddie+Poster+Breakdown/hoddie.png"

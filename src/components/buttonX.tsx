@@ -6,7 +6,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 export function HoverBorderGradientDemo({onClickFn}:{onClickFn:Function}) {
   return (
-    <div onClick={()=>{onClickFn()}} className="m-40 flex justify-center items-center text-center">
+    <div onClick={()=>{onClickFn()}} className=" flex justify-center items-center text-center">
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="button"

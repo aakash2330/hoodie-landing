@@ -21,7 +21,8 @@ import Marquee from "@/components/marquee";
 import Link from "next/link";
 import { HoverBorderGradientDemo } from "@/components/buttonX";
 import { img1, img2, img4 } from "@/lib/images";
-
+import { useRecoilState } from "recoil";
+import ContactPage from "./contact/page";
 
 export default function Page() {
   const [heroText, setHeroText] = useState("ETHKL");
@@ -30,7 +31,8 @@ export default function Page() {
   const [isScrollToExperienceShow, setIsScrollToExperienceShow] =
     useState(true);
 
-  const parallax = useRef<any>(null);
+  const parallax = useRef<any | null>(null);
+
   const [ref, inView] = useInView();
   const handleScroll = () => {
     if (parallax.current) {
@@ -50,6 +52,12 @@ export default function Page() {
   useEffect(() => {
     console.log({ inView });
   }, [inView]);
+
+  useEffect(() => {
+    if (parallax.current) {
+      console.log({ parallax });
+    }
+  }, [parallax]);
 
   useEffect(() => {
     if (parallax.current) {
@@ -103,10 +111,16 @@ export default function Page() {
           <h1 className="md:text-7xl text-2xl lg:text-7xl font-bold text-center text-white Permanent relative z-20 "></h1>
           <div className="flex gap-28 items-center justify-center">
             <Link href={"/hoodie/1"}>
-              <DirectionAwareHoverDemo img={img1}></DirectionAwareHoverDemo>
+              <DirectionAwareHoverDemo
+                description="Boho Style hoodie | Floral Print"
+                img={img1}
+              ></DirectionAwareHoverDemo>
             </Link>
             <Link href={"/hoodie/2"}>
-              <DirectionAwareHoverDemo img={img2}></DirectionAwareHoverDemo>
+              <DirectionAwareHoverDemo
+                description="Boho Style hoodie | Floral Print"
+                img={img2}
+              ></DirectionAwareHoverDemo>
             </Link>
           </div>
         </WavyBackground>
@@ -138,7 +152,7 @@ export default function Page() {
               ` ${currentPage >= 2.2 ? "opacity-0" : null} gap-7 bg-[#fcf6f2] flex flex-col items-center text-center text-black font-sans text-3xl justify-center p-10 size-[40rem]`,
             )}
           >
-            <div>Carefully Crafted For People That Care</div>
+            <div>About Us</div>
             <div className="font-extralight text-base ">
               I'm a paragraph. Click here to add your own text and edit me. I’m
               a great place for you to tell a story and let your users know a
@@ -175,29 +189,24 @@ export default function Page() {
       </ParallaxLayer>
 
       <ParallaxLayer
-        className="flex flex-col gap-2  items-center justify-center"
+        className="flex flex-col gap-5   items-center justify-center"
         offset={4}
-        style={{
-          zIndex: 2,
-          height: "100vh",
-          width: "full",
-          backgroundColor: "#EDE5DF",
-        }}
-      >
-        <InfiniteText></InfiniteText>
-      </ParallaxLayer>
-
-      <ParallaxLayer
-        className="flex flex-col gap-2  items-center justify-center"
-        offset={5}
         style={{ zIndex: 2, height: "100vh", backgroundColor: "#EDE5DF" }}
       >
+        <div className="text-gray-700 text-4xl">Ask Our Customers</div>
         <InfiniteMovingCardsDemo></InfiniteMovingCardsDemo>
         <HoverBorderGradientDemo
           onClickFn={function () {
             parallax.current.scrollTo(1);
           }}
         ></HoverBorderGradientDemo>
+      </ParallaxLayer>
+      <ParallaxLayer
+        className="flex flex-col gap-5     items-center justify-center"
+        offset={5}
+        style={{ zIndex: 2, height: "100vh", backgroundColor: "#000000" }}
+      >
+        <ContactPage></ContactPage>
       </ParallaxLayer>
     </Parallax>
   );

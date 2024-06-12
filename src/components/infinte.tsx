@@ -93,7 +93,6 @@ export const InfiniteMovingCards = ({
           >
             <blockquote>
               <Image
-                
                 src={item.quote}
                 alt="asd"
                 style={{ transition: "1s ease", zIndex:"-1" }}
@@ -102,12 +101,12 @@ export const InfiniteMovingCards = ({
                 priority={true}
                 fill
               ></Image>
-              <div style={{zIndex:100}} className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
+              <div style={{zIndex:100}} className="relative bg-black bg-opacity-60 p-5 rounded-t z-20 mt-6 flex flex-row items-center">
+                <span className="flex flex-col gap-2">
+                  <span className=" text-l  leading-[1.6]  text-gray-400 font-normal">
                     {item.title}
                   </span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
+                  <span className=" text-sm  leading-[1.6] text-gray-400 font-bold">
                     {item.name}
                   </span>
                 </span>
